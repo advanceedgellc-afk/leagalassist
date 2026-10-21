@@ -36,7 +36,7 @@ export default function Process() {
           <p className="text-sm italic leading-relaxed text-slate-600 md:text-sm">
             At Legal Assist, we are committed to providing comprehensive litigation support services that are tailored to your specific needs. Our process is designed to ensure timely, accurate, and cost-effective litigation support services. Contact us today to learn more.
           </p>
-           <CtaButton>Schedule A Call</CtaButton>
+           <CtaButton label="Schedule A Call" />
         </div>
       </div>
     </section>

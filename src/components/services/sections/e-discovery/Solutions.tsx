@@ -19,7 +19,7 @@ export default function Solutions() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
           <div className="order-2 space-y-6 lg:order-1 lg:col-span-5">
             <LegalReviewIllustration />
-            <div className="pt-2 text-center"><CtaButton>Schedule A Call</CtaButton></div>
+            <div className="pt-2 text-center"><CtaButton label="Schedule A Call" /></div>
           </div>
 
           <div className="order-1 space-y-6 lg:order-2 lg:col-span-7">

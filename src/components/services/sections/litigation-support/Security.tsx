@@ -34,7 +34,7 @@ export default function Security() {
           ))}
         </ul>
 
-        <div className="pt-2 text-center"><CtaButton>Schedule A Call</CtaButton></div>
+        <div className="pt-2 text-center"><CtaButton label="Schedule A Call" /></div>
       </div>
     </section>
   );
