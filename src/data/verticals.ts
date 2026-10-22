@@ -44,4 +44,4 @@ export const verticals: Vertical[] = [
   },
 ];
 
-export const verticalHref = (slug: string) => `/verticals/${slug}`;
+export const verticalHref = (slug: string) => `/verticals`;

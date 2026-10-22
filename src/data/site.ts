@@ -1,7 +1,7 @@
 export const site = {
   name: "Legal Assist",
   phone: "+1-800-350-4672",
-  phoneDisplay: "+800 350 4672",
+  phoneDisplay: "(800) 350-4672",
   addressLine1: "Candlelight Lane,",
   addressLine2: "Houston | Texas 77018",
   social: {

@@ -13,7 +13,7 @@ import FaqAccordion, { type Faq } from "@/components/contact/FaqAccordion";
 import GhlEmbed from "@/components/contact/GhlEmbed";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Legal Assist",
+  title: "Contact Us",
   description:
     "Contact Legal Assist for medical record review, deposition summarization, peer review and litigation support. Available 24/7.",
 };
@@ -293,7 +293,7 @@ export default function ContactPage() {
                   {CONTACT.address}
                 </p>
               </InfoCard>
-              <InfoCard icon={<Clock className="h-6 w-6" />} label="Time">
+              <InfoCard icon={<Clock className="h-6 w-6" />} label="Office Hours">
                 <p className="text-sm font-bold text-white md:text-base">
                   {CONTACT.hours}
                 </p>

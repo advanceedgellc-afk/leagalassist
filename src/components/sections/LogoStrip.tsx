@@ -66,8 +66,8 @@ export default function LogoStrip() {
       `}</style>
 
       <h2 id="clients-heading" className="sr-only">
-        Law firms that trust Legal Assist
-      </h2>
+      Companies that trust Legal Assist     
+ </h2>
 
       {/* accent lines */}
       <div aria-hidden className="absolute inset-x-0 top-0 h-1 bg-[#BFDBFE]/60" />

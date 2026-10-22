@@ -19,7 +19,7 @@ export default function FaqAdvantages() {
       <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 lg:grid-cols-2">
         {/* FAQ */}
         <div>
-          <h2 className="text-center text-3xl font-bold text-[#0b2a5b]">FAQ&apos;s</h2>
+          <h2 className="text-center text-3xl font-bold text-[#0b2a5b]">FAQs</h2>
           <p className="mx-auto mt-3 max-w-md text-center text-sm font-bold text-[#0b2a5b]">
             Empowering You with Knowledge: Frequently Asked Questions About Our Lead Management and Review Services.
           </p>

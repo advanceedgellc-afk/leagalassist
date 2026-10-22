@@ -23,7 +23,7 @@ export default function FaqResults() {
           <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
             <div>
               <div className="mb-8 text-center">
-                <h2 className="mb-3 text-3xl font-extrabold text-[#0f2b5c] md:text-4xl">FAQ&apos;s</h2>
+                <h2 className="mb-3 text-3xl font-extrabold text-[#0f2b5c] md:text-4xl">FAQs</h2>
                 <p className="mx-auto max-w-lg text-xs font-bold leading-relaxed text-[#0f2b5c] md:text-sm">
                   Common Questions About Our Medical Record Review Services
                 </p>
