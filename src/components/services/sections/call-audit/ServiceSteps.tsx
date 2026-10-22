@@ -1,9 +1,7 @@
-import { Database, Eye, FileSearch, FileText } from "lucide-react";
 import CtaButton from "@/components/ui/CtaButton";
 import { steps } from "@/data/call-audit";
 import { AuditServicesIllustration } from "./Illustrations";
 
-const ICONS = [Database, FileSearch, FileText, Eye];
 
 export function BoxCheck() {
   return (

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { BarChart3, Layers, PhoneCall } from "lucide-react";
 import BookCallButton from "../booking/BookCallButton";
 
@@ -25,7 +24,7 @@ const paragraphCls = "text-sm font-normal leading-relaxed text-slate-100 sm:text
 
 export default function MassTortSupport() {
   return (
-    <section className="relative w-full overflow-hidden bg-white font-sans">
+    <section id="mass-tort" className="relative w-full scroll-mt-24 overflow-hidden bg-white font-sans">
       {/* ---------- dashboard mockup (decorative) ---------- */}
       <div className="relative w-full overflow-hidden border-b border-slate-200/60 bg-[#f8fafc] px-4 pb-16 pt-12 sm:px-6 sm:pb-24 lg:px-8">
         <div

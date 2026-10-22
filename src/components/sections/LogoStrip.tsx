@@ -14,7 +14,7 @@ const CLIENTS: Client[] = [
   { id: "aiyl-stock-witken", name: "Aiyl Stock Witken", logo: "/clients/cl3.png" },
   { id: "amazon", name: "Amazon", logo: "/clients/cl4.png" },
   { id: "watts-guerra", name: "Watts Guerra", logo: "/clients/cl5.webp" },
-  { id: "thomson-reuters", name: "Thomson-Reuters", logo: "/clients/cl6.webp" },
+  { id: "thomson-reuters", name: "Thomson Reuters", logo: "/clients/cl6.webp" },
   { id: "paul-maccuness", name: "Paul Maccuness", logo: "/clients/cl7.webp" },
   { id: "moore-law-firm", name: "Moore Law Firm", logo: "/clients/cl8.webp" },
   { id: "meade-neese", name: "Meade & Neese LLP", logo: "/clients/cl9.webp" },
@@ -26,16 +26,16 @@ const CLIENTS: Client[] = [
 ];
 
 /* Seconds for one full loop. Higher = slower. */
-const SPEED = 60;
+const SPEED = 40;
 
 function LogoGroup({ hidden = false }: { hidden?: boolean }) {
   return (
-    // pr matches the gap, so the seam between the two copies is identical to every other gap
+    // pr matches the gap, so the seam between the two copies looks like every other gap
     <ul aria-hidden={hidden || undefined} className="flex shrink-0 items-center gap-10 pr-10 sm:gap-16 sm:pr-16">
-      {CLIENTS.map((c) => (
+      {CLIENTS.map((c, i) => (
         <li
-          key={c.id}
-          title={c.name}
+          key={`${c.id}-${i}`}
+          title={hidden ? undefined : c.name}
           className="relative h-[74px] w-[160px] shrink-0 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 sm:h-[115px] sm:w-[250px]"
         >
           <Image
@@ -43,6 +43,7 @@ function LogoGroup({ hidden = false }: { hidden?: boolean }) {
             alt={hidden ? "" : `${c.name} logo`}
             width={LOGO_W}
             height={LOGO_H}
+            sizes="(min-width: 640px) 250px, 160px"
             className="h-full w-full object-contain"
           />
         </li>
@@ -66,8 +67,8 @@ export default function LogoStrip() {
       `}</style>
 
       <h2 id="clients-heading" className="sr-only">
-      Companies that trust Legal Assist     
- </h2>
+        Companies that trust Legal Assist
+      </h2>
 
       {/* accent lines */}
       <div aria-hidden className="absolute inset-x-0 top-0 h-1 bg-[#BFDBFE]/60" />
@@ -78,12 +79,10 @@ export default function LogoStrip() {
       <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 z-20 w-16 bg-gradient-to-l from-white via-white/80 to-transparent sm:w-32" />
 
       <div className="logo-marquee flex w-full overflow-hidden">
-        {/* Two identical halves; moving left by exactly one half (-50%) makes the loop seamless.
-            Each half holds the logos twice so wide screens never show an empty gap. */}
+        {/* Two identical copies; sliding left by exactly one copy (-50%) makes the loop seamless.
+            14 logos make one copy about 4,500px wide, wider than any screen, so two copies are enough. */}
         <div className="logo-marquee-track flex w-max">
           <LogoGroup />
-          <LogoGroup hidden />
-          <LogoGroup hidden />
           <LogoGroup hidden />
         </div>
       </div>

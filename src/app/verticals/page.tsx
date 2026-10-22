@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import PageHero from "@/components/PageHero";
 import VerticalsIntro from "@/components/verticals/VerticalsIntro";
 import ExperienceApart from "@/components/verticals/ExperienceApart";
 import MassTortSupport from "@/components/verticals/MassTortSupport";
 import LegalMarketingSupport from "@/components/verticals/LegalMarketingSupport";
 import VerticalSections from "@/components/verticals/VerticalSections";
-import { verticals, verticalHref } from "@/data/verticals";
 import ServiceHero from "@/components/services/ServiceHero";
 
 export const metadata: Metadata = {

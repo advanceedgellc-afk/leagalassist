@@ -13,8 +13,6 @@ const LinkedinIcon = () => (
   </svg>
 );
 
-const ctaDark =
-  "rounded-xl bg-[#002244] px-8 py-4 text-center text-xs font-extrabold uppercase tracking-widest text-white shadow-xl transition-all hover:bg-[#D9531E]";
 
 /* ---------------- Hero ---------------- */
 const QTAT_URL = "https://www.qtatinc.com";

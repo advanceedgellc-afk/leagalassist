@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { MessageSquare, PhoneCall, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { faqs } from "@/data/faqs";
 import FaqList from "./FaqList";
 

@@ -52,13 +52,15 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // close everything on route change
-  useEffect(() => {
+  // close everything on route change (adjusted during render, no effect needed)
+  const [prevPath, setPrevPath] = useState(pathname);
+  if (pathname !== prevPath) {
+    setPrevPath(pathname);
     setServicesOpen(false);
     setMobileOpen(false);
     setSearchOpen(false);
     setQuery("");
-  }, [pathname]);
+  }
 
   // Esc closes everything
   useEffect(() => {

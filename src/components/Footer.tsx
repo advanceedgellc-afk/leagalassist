@@ -70,7 +70,7 @@ export default function Footer() {
                 width={200}
                 height={48}
                 style={{ width: "auto" }}
-                className="h-10 w-auto"   // keep your existing classes
+                className="h-10 w-auto"
               />
             </Link>
 
@@ -149,7 +149,7 @@ export default function Footer() {
             </div>
 
             <p className="text-center font-sans text-xs font-medium text-slate-300 sm:text-sm">
-              © Copyright <span className="font-bold text-[#D9531E]"><a href="/"  rel="noopener noreferrer">Legal Assist</a></span> {new Date().getFullYear()}
+              © Copyright <span className="font-bold text-[#D9531E]"><Link href="/" className="hover:underline">Legal Assist</Link></span> {new Date().getFullYear()}
             </p>
           </div>
         </div>

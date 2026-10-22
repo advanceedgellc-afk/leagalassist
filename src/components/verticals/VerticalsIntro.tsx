@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { Briefcase, Check, PhoneCall, ShieldCheck, Users } from "lucide-react";
+import { PhoneCall } from "lucide-react";
 import BookCallButton from "../booking/BookCallButton";
 import Image from "next/image";
 export default function VerticalsIntro() {
@@ -63,7 +62,7 @@ export default function VerticalsIntro() {
           <p className="font-serif text-base font-bold italic tracking-tight text-[#002244] sm:text-lg lg:text-xl">
             Discover how our team of experts can assist your business in achieving its legal goals.
           </p>
-          <div>
+          <div className="flex justify-center  ">
             <BookCallButton className="flex shrink-0 cursor-pointer items-center gap-2 rounded-2xl bg-amber-500 px-8 py-4 text-xs font-extrabold uppercase tracking-wider text-slate-950 shadow-xl shadow-amber-500/20 transition hover:scale-[1.02] hover:bg-amber-400 active:scale-[0.98] motion-reduce:hover:scale-100 sm:text-sm">
               <PhoneCall aria-hidden className="h-4 w-4" />
               Schedule A Free Call

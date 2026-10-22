@@ -1,8 +1,6 @@
-import Link from "next/link";
 import { testimonials } from "@/data/testimonials";
 import TestimonialSlider from "./TestimonialSlider";
 import BookCallButton from "../booking/BookCallButton";
-import { PhoneCall } from "lucide-react";
 
 export default function Testimonials() {
   return (

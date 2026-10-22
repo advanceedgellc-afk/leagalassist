@@ -1,10 +1,9 @@
-import Link from "next/link";
 import Image from "next/image";
 import {
   Scale, Sliders, Award, Clock, FileText, Users, TrendingUp, ShieldCheck, Trophy,
-  Sparkles, ArrowRight, Check, Shield, Star, CheckCircle2,
+  Sparkles, Check, Shield, Star, CheckCircle2,
   type LucideIcon,
-  PhoneCall,
+  
 } from "lucide-react";
 import BookCallButton from "../booking/BookCallButton";
 

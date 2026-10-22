@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { Clock, UserCheck, DollarSign, Zap, Globe, type LucideIcon, PhoneCall } from "lucide-react";
+import { Clock, UserCheck, DollarSign, Zap, Globe, type LucideIcon } from "lucide-react";
 import BookCallButton from "../booking/BookCallButton";
 
 type Pill = {

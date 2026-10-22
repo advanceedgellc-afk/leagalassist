@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Gavel, ShieldCheck, Briefcase, FileText, BookOpen, Building2, type LucideIcon, PhoneCall } from "lucide-react";
+import { Gavel, ShieldCheck, Briefcase, FileText, BookOpen, Building2, type LucideIcon } from "lucide-react";
 import { verticals, verticalHref } from "@/data/verticals";
 import BookCallButton from "../booking/BookCallButton";
 

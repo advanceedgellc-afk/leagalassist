@@ -1,12 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import type { Testimonial } from "@/data/testimonials";
 
 const INTERVAL = 3500;
 const DURATION = 600; // ms, keep in sync with duration-[600ms] below
+
+const REDUCED_QUERY = "(prefers-reduced-motion: reduce)";
+const subscribeReduced = (cb: () => void) => {
+  const mq = window.matchMedia(REDUCED_QUERY);
+  mq.addEventListener("change", cb);
+  return () => mq.removeEventListener("change", cb);
+};
+const getReduced = () => window.matchMedia(REDUCED_QUERY).matches;
+const getReducedServer = () => false;
 
 const initials = (name: string) =>
   name.split(" ").map((p) => p[0]).slice(0, 2).join("").toUpperCase();
@@ -87,19 +96,11 @@ export default function TestimonialSlider({ items }: { items: Testimonial[] }) {
   const [animate, setAnimate] = useState(true);
   const [tick, setTick] = useState(0); // restarts autoplay + progress after every move
   const [paused, setPaused] = useState(false);
-  const [reduced, setReduced] = useState(false);
+  const reduced = useSyncExternalStore(subscribeReduced, getReduced, getReducedServer);
 
   const posRef = useRef(pos);
   const lock = useRef(false);
   const fallback = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReduced(mq.matches);
-    const on = (e: MediaQueryListEvent) => setReduced(e.matches);
-    mq.addEventListener("change", on);
-    return () => mq.removeEventListener("change", on);
-  }, []);
 
   // after reaching a clone, jump (without animation) to the matching real slide
   const settle = useCallback(() => {

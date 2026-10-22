@@ -15,7 +15,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     name: "Melinda Rodriguez",
-    title: "Fortbend Surgery Center Houston, Texas",
+    title: "Fort Bend Surgery Center Houston, Texas",
     avatar: "/profile/pf3.webp",
     quote:
       "\"Great Customer Service...\" “It has been a great pleasure working with QTAT and your team. Our reports are always received in a timely manner. Your team always goes beyond helping our physicians at all times. Thank you again for the great customer service that you give us daily without any hesitation”",

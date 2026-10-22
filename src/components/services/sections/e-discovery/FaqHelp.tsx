@@ -25,7 +25,7 @@ export default function FaqHelp() {
               <div className="mb-8 text-center">
                 <h2 className="mb-3 text-3xl font-extrabold text-[#0f2b5c] md:text-4xl">FAQs</h2>
                 <p className="mx-auto max-w-lg text-xs font-bold leading-relaxed text-[#0f2b5c] md:text-sm">
-                 Answers to common questions about Legal Assist's e-discovery services
+                 Answers to common questions about Legal Assist&apos;s e-discovery services
                 </p>
               </div>
 

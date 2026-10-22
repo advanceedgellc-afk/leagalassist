@@ -25,7 +25,7 @@ const bodyCls = "text-xs leading-relaxed text-slate-700 sm:text-sm lg:text-base"
 
 export default function LegalMarketingSupport() {
   return (
-    <section className="bg-[#F4F7FC] px-4 py-12 font-sans text-slate-800 selection:bg-amber-500 selection:text-white sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <section id="legal-marketing" className="scroll-mt-24 bg-[#F4F7FC] px-4 py-12 font-sans text-slate-800 selection:bg-amber-500 selection:text-white sm:px-6 sm:py-16 lg:px-8 lg:py-20">
       <div className="mx-auto w-full max-w-7xl space-y-10 sm:space-y-12">
         {/* header */}
         <div className="max-w-6xl space-y-4">

@@ -1,4 +1,3 @@
-import SectionSlot from "@/components/SectionSlot";
 import Hero from "@/components/sections/Hero";
 import WhyUs from "@/components/sections/WhyUs";
 import ServicesGrid from "@/components/sections/ServicesGrid";

@@ -1,8 +1,7 @@
-import Link from "next/link";
 import SectionSlot from "@/components/SectionSlot";
 import ServiceHero from "@/components/services/ServiceHero";
 import { getService } from "@/lib/services";
-import { services, serviceHref } from "@/data/services";
+import {  serviceHref } from "@/data/services";
 import { SITE_URL } from "@/lib/site-url";
 export default function ServicePageTemplate({
   slug,
