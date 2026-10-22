@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Contact Us",
   description:
     "Contact Legal Assist for medical record review, deposition summarization, peer review and litigation support. Available 24/7.",
+    alternates: { canonical: "/contact" },
 };
 
 /* ------------------------------------------------------------------ */

@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 import BookingProvider from "@/components/booking/BookingProvider";
-const SITE = process.env.NEXT_PUBLIC_SITE_URL!;
+import { SITE_URL as SITE } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),

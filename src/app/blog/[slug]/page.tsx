@@ -6,9 +6,10 @@ import type { Metadata } from "next";
 import { ChevronLeft, Clock, ImageIcon, LayoutGrid, User } from "lucide-react";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
-import { portableTextComponents } from "@/components/blog/Portabletextcomponents ";
+import { portableTextComponents } from "@/components/blog/PortableTextComponents";
 import BlogSidebar from "@/components/blog/BlogSidebar";
 import ShareButtons from "@/components/blog/Sharebuttons";
+import { SITE_URL } from "@/lib/site-url";
 
 export const revalidate = 60;
 
@@ -64,7 +65,7 @@ export default async function PostPage({ params }: Props) {
   const p = await client.fetch(postQuery, { slug });
   if (!p) notFound();
 
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "";
+ const base = SITE_URL;
   const url = `${base}/blog/${slug}`;
   const img = p.mainImage?.asset ? urlFor(p.mainImage).width(1200).height(630).url() : null;
   const minutes = p.words ? Math.max(1, Math.round(p.words / 200)) : null;

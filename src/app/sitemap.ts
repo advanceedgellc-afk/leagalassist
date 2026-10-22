@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
 import { services, serviceHref } from "@/data/services";
 import { client } from "@/sanity/lib/client";
+import { SITE_URL } from "@/lib/site-url";
 
 // Rebuild the sitemap at most once an hour so new blog posts appear without a redeploy.
 export const revalidate = 3600;
 
-const base = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.legalassistpro.com").replace(/\/$/, "");
-
+const base = SITE_URL;
 const staticPages: { path: string; priority: number; changeFrequency: "weekly" | "monthly" | "yearly" }[] = [
   { path: "", priority: 1, changeFrequency: "weekly" },
   { path: "/services", priority: 0.9, changeFrequency: "monthly" },

@@ -3,7 +3,7 @@ import SectionSlot from "@/components/SectionSlot";
 import ServiceHero from "@/components/services/ServiceHero";
 import { getService } from "@/lib/services";
 import { services, serviceHref } from "@/data/services";
-
+import { SITE_URL } from "@/lib/site-url";
 export default function ServicePageTemplate({
   slug,
   children,
@@ -12,7 +12,7 @@ export default function ServicePageTemplate({
   children?: React.ReactNode; // your custom sections; placeholders show if empty
 }) {
   const s = getService(slug);
-  const base = process.env.NEXT_PUBLIC_SITE_URL!;
+  const base = SITE_URL;
   const pageUrl = `${base}${serviceHref(s.slug)}`;
 
   const jsonLd = [
