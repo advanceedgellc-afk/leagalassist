@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 /*  Site details: edit these in one place                              */
 /* ------------------------------------------------------------------ */
 const CONTACT = {
-  email: "chahat@legalassistpro.com",
+  email: "chabala@legalassistpro.com",
   phoneDisplay: "(800) 350-4672",
   phoneHref: "tel:8003504672",
   address: "Candlelight Lane, Houston, Texas 77018",
@@ -257,7 +257,7 @@ export default function ContactPage() {
             {/* Photo */}
             <div className="group relative h-72 overflow-hidden rounded-3xl border border-slate-700/80 shadow-2xl md:h-[22rem] lg:col-span-6">
               <Image
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80"
+                src="/contact/contact-us.webp"
                 alt="Legal Assist support specialist with headset"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
